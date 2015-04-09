@@ -1,0 +1,22 @@
+.txtMastheadSearch {
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    height: 40px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.btnMastheadSearch {
+    height: 20px;
+    width: 30px;
+    right: 0px;
+    background: url(http://images.frmonline.com/sites/frc/design/header/btn-search-no-bg.png) no-repeat;
+}
+
+.logo {
+    background: url("http://images.frmonline.com/sites/frc/design/header/frc-logo-blue.svg") no-repeat;
+    width: 240;
+    height: 40px;
+    display: block;
+    text-indent: -9999px;
+}
