@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html ng-app="frApp">
+<html ng-app>
 
 <head>
   <title>Lets get angular!!</title>
   <link type="text/css" rel="stylesheet" href="http://www.forrent.com/assets/css/styles.css"></link>
   <link type="text/css" rel="stylesheet" href="/app/css/app.css"></link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js" charset="utf-8"></script>
 </head>
 
 <body>
-
+    <h1 class="txtC wFull">1 + 15 = {{ 1 + 15 }}</h1>
     <!-- Main Content -->
     <section class="pageBody balance w1000">
-        <h1 class="txtC wFull">Hello Angular!</h1>
+        <h1 class="txtC wFull">{{ obj.x.y.z || 'Does not exist'}}</h1>
+        <div class="line">
+          <div class="unit mt10 size1of4 expandable">
+              <input ng-model="username" type="text" placeholder="Your Name Please" class="wFull fs18 bdrBox txtMastheadSearch"></input>
+          </div>
+          <div class="unitRt size1of2 txtC">
+              <h1 class="txtC wFull">Hello {{username || 'Developer'}}!</h1>
+          </div>
+        </div>
     </section>
+
 </body>
 </html>
