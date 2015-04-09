@@ -8,7 +8,7 @@
     $ http-server -p 8080
 
 ### AngularJS CDN URL
-    https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"></script>
+    https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js
 
 #### AngularJS Documentation
     https://docs.angularjs.org
