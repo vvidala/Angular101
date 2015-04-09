@@ -1,5 +1,10 @@
-angular.module("frApp").controller('mainCtrl', function($scope, $http){
-    $http.get('/snippets/js/listings.json').then(function(response) {
-        $scope.listings = response.data;
-    })
-});
+function MainCtrl(scp, frListingService){
+
+    frListingService.getListings().then(function(listings) {
+        scp.listings = listings;
+    });
+
+    
+}
+
+angular.module("frApp").controller('mainCtrl', ['$scope', 'frListingService', MainCtrl]);

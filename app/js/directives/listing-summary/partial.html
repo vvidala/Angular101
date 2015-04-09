@@ -1,0 +1,48 @@
+<section id="searchMatch0-hcard" class="rel match exactmatch vcard">
+  <div class="unit size2of5 rel">
+    <div class="dBlock wFull hFull csrPointer lightbox ie9VideoBg watchVideo rel">
+      <img width="400" height="200" ng-src="{{listing.main_image.large_url | imgResize}}">
+      <div class="videoIconCircle bdrBox abs absCenter">
+        <div class="videoIconTriangle abs absCenter"></div>
+      </div>
+    </div>
+  </div>
+  <div class="unit size3of5 pl20 bdrBox">
+    <div class="line sep">
+      <div class="unit size1of2 line">
+        <header class="adr location sep">
+          <h2 class="noSep h3ish fn org">
+            <a href="http://www.forrent.com/apartment-community-profile/999903705.php" target="_blank" class="searchMatchTitle permalink dBlock fs20 lineHt1">{{ listing.name }}</a>
+          </h2>
+          <div class="fs14 upperCase">{{listing.geo.address_one}}</div>
+          <div class="fs14 upperCase">{{listing.geo.city_name}}, {{listing.geo.state_code}} {{listing.geo.zip_code}}</div>
+        </header>
+        <div class="unit line mt10">
+            <a href="tel:{{listing.main_phone | phonenumber}}" class="bold txtC txtDkGry noHover fs18 csrDefault">{{listing.main_phone | phonenumber : true}}</a>
+        </div>
+      </div>
+      <div class="unit size1of2 line">
+
+        <a href="#" class="dBlock sep p10 plGryBg txtC fs16" ng-repeat="fp in listing.floorplans | limitTo : 3">{{fp.beds}} Bed From {{fp.price.low | currency }}</a>
+      </div>
+    </div>
+    <div class="line">
+      <div class="unit mt10 size1of4 expandable" ng-click="toggleDetails()">
+        <div class="unit mr10 pr5 pl5 bdrBlue fakeLink noHover csrPointer open" ng-hide="detailOpen">+</div>
+        <div class="unit mr10 pr5 pl5 bdrBlue fakeLink noHover csrPointer close" ng-show="detailOpen">−</div>
+        <div class="unit fakeLink">Preview Details</div>
+      </div>
+      <div class="unitRt size1of2  txtC">
+        <span class="dInlineBlock balance fs18 orange wFull button csrPointer">Check Availability</span>
+      </div>
+    </div>
+  </div>
+  <section id="details999903705" class="unit mt20 p10 matchFeatures" ng-if="detailOpen">
+    <ul class="line gutters features section bullList pl20 noSep">
+      <li class="unit size1of2">Full-Size Washer and Dryer INCLUDED!</li>
+      <li class="unit size1of2">Kitchens feature built-in microwaves</li>
+      <li class="unit size1of2">Private verandas &amp; storage</li>
+      <li class="unit size1of2">Car Charging Station</li>
+    </ul>
+  </section>
+</section>
